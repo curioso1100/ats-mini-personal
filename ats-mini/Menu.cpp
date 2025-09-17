@@ -25,7 +25,7 @@ int bandIdx = 0;
 // Do not forget to update the bands table in the manual.md
 Band bands[] =
 {
-  {"VHF",  FM_BAND_TYPE, FM,   6400, 10800, 10390, 2, 0, 0, 0},
+  {"FM ",  FM_BAND_TYPE, FM,   6400, 10800,  9480, 2, 0, 0, 0},  // Emilio (por defecto Los 40 classic)
   // All band. LW, MW and SW (from 150kHz to 30MHz)
   {"ALL",  SW_BAND_TYPE, AM,    150, 30000, 15000, 1, 4, 0, 0},
   {"11M",  SW_BAND_TYPE, AM,  25600, 26100, 25850, 1, 4, 0, 0},

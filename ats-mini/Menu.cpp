@@ -239,7 +239,7 @@ int getTotalUTCOffsets() { return(ITEM_COUNT(utcOffsets)); }
 //
 // UI Layout Menu
 //
-uint8_t uiLayoutIdx = 0;
+uint8_t uiLayoutIdx = 1;  // Emilio por defecto 0
 static const char *uiLayoutDesc[] =
 { "Default", "S-Meter" };
 
@@ -257,7 +257,7 @@ int getTotalBleModes() { return(ITEM_COUNT(bleModeDesc)); }
 // WiFi Mode Menu
 //
 
-uint8_t wifiModeIdx = NET_OFF;
+uint8_t wifiModeIdx = NET_SYNC;  // Emilio (por defecto NET_OFF y lo he cambiado a NET_SYNC)
 static const char *wifiModeDesc[] =
 { "Off", "AP Only", "AP+Connect", "Connect", "Sync Only" };
 

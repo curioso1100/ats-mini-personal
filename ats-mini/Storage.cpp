@@ -260,7 +260,7 @@ bool prefsLoad(uint32_t items)
     rdsModeIdx     = prefs.getUChar("RDSMode", rdsModeIdx);     // RDS mode
     sleepModeIdx   = prefs.getUChar("SleepMode", sleepModeIdx); // Sleep mode
     zoomMenu       = prefs.getUChar("ZoomMenu", zoomMenu);      // TRUE: Zoom menu
-    scrollDirection = prefs.getBool("ScrollDir", scrollDirection<0)? -1:1; // TRUE: Reverse scroll
+    scrollDirection = prefs.getBool("ScrollDir", scrollDirection<0)? 1:-1; // Emilio (por defecto ponía  -1:1)
     utcOffsetIdx   = prefs.getUChar("UTCOffset", utcOffsetIdx); // UTC Offset
     currentSquelch = prefs.getUChar("Squelch", currentSquelch); // Squelch
     FmRegionIdx    = prefs.getUChar("FmRegion", FmRegionIdx);   // FM region

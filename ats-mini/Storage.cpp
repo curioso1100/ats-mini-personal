@@ -244,28 +244,28 @@ bool prefsLoad(uint32_t items)
     }
 
     // Load main global settings
-    volume         = prefs.getUChar("Volume", volume);          // Current volume
-    bandIdx        = prefs.getUChar("Band", bandIdx);           // Current band
-    wifiModeIdx    = prefs.getUChar("WiFiMode", wifiModeIdx);   // WiFi connection mode
-    currentBrt     = prefs.getUShort("Brightness", currentBrt); // Brightness
-    FmAgcIdx       = prefs.getUChar("FmAGC", FmAgcIdx);         // FM AGC/ATTN
-    AmAgcIdx       = prefs.getUChar("AmAGC", AmAgcIdx);         // AM AGC/ATTN
-    SsbAgcIdx      = prefs.getUChar("SsbAGC", SsbAgcIdx);       // SSB AGC/ATTN
-    AmAvcIdx       = prefs.getUChar("AmAVC", AmAvcIdx);         // AM AVC
-    SsbAvcIdx      = prefs.getUChar("SsbAVC", SsbAvcIdx);       // SSB AVC
-    AmSoftMuteIdx  = prefs.getUChar("AmSoftMute", AmSoftMuteIdx);   // AM soft mute
-    SsbSoftMuteIdx = prefs.getUChar("SsbSoftMute", SsbSoftMuteIdx); // SSB soft mute
-    currentSleep   = prefs.getUShort("Sleep", currentSleep);    // Sleep delay
-    themeIdx       = prefs.getUChar("Theme", themeIdx);         // Color theme
-    rdsModeIdx     = prefs.getUChar("RDSMode", rdsModeIdx);     // RDS mode
-    sleepModeIdx   = prefs.getUChar("SleepMode", sleepModeIdx); // Sleep mode
-    zoomMenu       = prefs.getUChar("ZoomMenu", zoomMenu);      // TRUE: Zoom menu
-    scrollDirection = prefs.getBool("ScrollDir", scrollDirection>=0)? -1:1; // Emilio (antes ponía "<" en la comparación)
-    utcOffsetIdx   = prefs.getUChar("UTCOffset", utcOffsetIdx); // UTC Offset
-    currentSquelch = prefs.getUChar("Squelch", currentSquelch); // Squelch
-    FmRegionIdx    = prefs.getUChar("FmRegion", FmRegionIdx);   // FM region
-    uiLayoutIdx    = prefs.getUChar("UILayout", uiLayoutIdx);   // UI Layout
-    bleModeIdx     = prefs.getUChar("BLEMode", bleModeIdx);     // Bluetooth mode
+    volume          = prefs.getUChar("Volume", volume);          // Current volume
+    bandIdx         = prefs.getUChar("Band", bandIdx);           // Current band
+    wifiModeIdx     = prefs.getUChar("WiFiMode", wifiModeIdx);   // WiFi connection mode
+    currentBrt      = prefs.getUShort("Brightness", currentBrt); // Brightness
+    FmAgcIdx        = prefs.getUChar("FmAGC", FmAgcIdx);         // FM AGC/ATTN
+    AmAgcIdx        = prefs.getUChar("AmAGC", AmAgcIdx);         // AM AGC/ATTN
+    SsbAgcIdx       = prefs.getUChar("SsbAGC", SsbAgcIdx);       // SSB AGC/ATTN
+    AmAvcIdx        = prefs.getUChar("AmAVC", AmAvcIdx);         // AM AVC
+    SsbAvcIdx       = prefs.getUChar("SsbAVC", SsbAvcIdx);       // SSB AVC
+    AmSoftMuteIdx   = prefs.getUChar("AmSoftMute", AmSoftMuteIdx);   // AM soft mute
+    SsbSoftMuteIdx  = prefs.getUChar("SsbSoftMute", SsbSoftMuteIdx); // SSB soft mute
+    currentSleep    = prefs.getUShort("Sleep", currentSleep);    // Sleep delay
+    themeIdx        = prefs.getUChar("Theme", themeIdx);         // Color theme
+    rdsModeIdx      = prefs.getUChar("RDSMode", rdsModeIdx);     // RDS mode
+    sleepModeIdx    = prefs.getUChar("SleepMode", sleepModeIdx); // Sleep mode
+    zoomMenu        = prefs.getUChar("ZoomMenu", zoomMenu);      // TRUE: Zoom menu
+    scrollDirection = prefs.getBool("ScrollDir", scrollDirection<0)? 1:-1; // Emilio (antes ponía -1:1)
+    utcOffsetIdx    = prefs.getUChar("UTCOffset", utcOffsetIdx); // UTC Offset
+    currentSquelch  = prefs.getUChar("Squelch", currentSquelch); // Squelch
+    FmRegionIdx     = prefs.getUChar("FmRegion", FmRegionIdx);   // FM region
+    uiLayoutIdx     = prefs.getUChar("UILayout", uiLayoutIdx);   // UI Layout
+    bleModeIdx      = prefs.getUChar("BLEMode", bleModeIdx);     // Bluetooth mode
 
     // Done with global settings
     prefs.end();

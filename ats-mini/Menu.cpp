@@ -1535,8 +1535,8 @@ static void drawScrollDir(int x, int y, int sx)
   if(scrollDirection>0)
     spr.fillTriangle(39+x+(sx/2)-5, 45+y, 39+x+(sx/2)+5, 45+y, 39+x+(sx/2), 45+y-5, TH.menu_param);
   else
-    ///////////////////////////////////////////////////////////
-    spr.fillTriangle(39+x+(sx/2)-5, 65+y, 39+x+(sx/2)+5, 65+y, 39+x+(sx/2), 65+y+5, TH.menu_param); ////////
+    // flecha abajo
+    spr.fillTriangle(39+x+(sx/2)-5, 85+y, 39+x+(sx/2)+5, 85+y, 39+x+(sx/2), 85+y+5, TH.menu_param);
 }
 
 static void drawInfo(int x, int y, int sx)

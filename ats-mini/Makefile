@@ -4,7 +4,7 @@ PROFILE	= esp32s3-ospi
 FQBN	= esp32.esp32.esp32s3
 INO	= ats-mini.ino
 ELF	= ./build/$(FQBN)/$(INO).elf
-PORT	?= /dev/cu.usbmodem1101
+PORT	?= /dev/ttyACM0
 
 DEBUG_LEVEL ?= 0
 
@@ -36,7 +36,7 @@ all: build
 help:
 	@echo 'Run this command to upload the firmware to your radio:'
 	@echo
-	@echo '  make upload PORT=/dev/cu.usbmodem1101'
+	@echo '  make upload PORT=/dev/ttyACM0'
 	@echo
 
 build: $(ELF)

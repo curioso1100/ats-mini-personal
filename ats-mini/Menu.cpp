@@ -25,7 +25,7 @@ int bandIdx = 0;
 // Do not forget to update the bands table in the manual.md
 Band bands[] =
 {
-  {"FM ",  FM_BAND_TYPE, FM,   6400, 10800,  9480, 2, 0, 0, 0},  // Emilio (por defecto Los 40 classic)
+  {"FM ",  FM_BAND_TYPE, FM,   6400, 10800,  9480, 2, 0, 0, 0},  // Emilio (por defecto "Los 40 classic")
   // All band. LW, MW and SW (from 150kHz to 30MHz)
   {"ALL",  SW_BAND_TYPE, AM,    150, 30000, 15000, 1, 4, 0, 0},
   {"11M",  SW_BAND_TYPE, AM,  25600, 26100, 25850, 1, 4, 0, 0},
@@ -181,7 +181,7 @@ int getTotalMemories() { return(ITEM_COUNT(memories)); }
 // RDS Menu
 //
 
-uint8_t rdsModeIdx = 4;  // Emilio (antes ponía 4)
+uint8_t rdsModeIdx = 4;  // Emilio (antes ponía 0)
 static const RDSMode rdsMode[] =
 {
   { RDS_PS, "PS"},
@@ -1535,7 +1535,8 @@ static void drawScrollDir(int x, int y, int sx)
   if(scrollDirection>0)
     spr.fillTriangle(39+x+(sx/2)-5, 45+y, 39+x+(sx/2)+5, 45+y, 39+x+(sx/2), 45+y-5, TH.menu_param);
   else
-    spr.fillTriangle(39+x+(sx/2)-5, 85+y, 39+x+(sx/2)+5, 85+y, 39+x+(sx/2), 85+y+5, TH.menu_param);
+    ///////////////////////////////////////////////////////////
+    spr.fillTriangle(39+x+(sx/2)-5, 65+y, 39+x+(sx/2)+5, 65+y, 39+x+(sx/2), 65+y+5, TH.menu_param); ////////
 }
 
 static void drawInfo(int x, int y, int sx)

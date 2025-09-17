@@ -181,7 +181,7 @@ int getTotalMemories() { return(ITEM_COUNT(memories)); }
 // RDS Menu
 //
 
-uint8_t rdsModeIdx = 0;
+uint8_t rdsModeIdx = 4;  // Emilio (antes ponía 4)
 static const RDSMode rdsMode[] =
 {
   { RDS_PS, "PS"},

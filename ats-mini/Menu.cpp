@@ -208,7 +208,7 @@ static const char *sleepModeDesc[] =
 // UTC Offset Menu
 // FIXME: add more offsets https://en.wikipedia.org/wiki/List_of_UTC_offsets
 //
-uint8_t utcOffsetIdx = 8;
+uint8_t utcOffsetIdx = 10;  // Emilio (antes ponia 8)
 const UTCOffset utcOffsets[] =
 {
   { -8 * 4, "UTC-8", "Fairbanks" },

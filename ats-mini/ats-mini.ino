@@ -72,8 +72,8 @@ uint8_t FmRegionIdx = 0;                // FM Region
 uint16_t currentBrt = 100;              // Display brightness, range = 10 to 255 in steps of 5 (Emilio: ponía 130)
 uint16_t currentSleep = DEFAULT_SLEEP;  // Display sleep timeout, range = 0 to 255 in steps of 5
 long elapsedSleep = millis();           // Display sleep timer
-bool zoomMenu = true;                   // Display zoomed menu item (Emilio: por defeto false)
-int8_t scrollDirection = 0;             // Menu scroll direction
+bool zoomMenu = true;                   // Display zoomed menu item (Emilio: por defecto false)
+int8_t scrollDirection = 1;             // Menu scroll direction (Emilio: antes ponía 0)
 
 // Background screen refresh
 uint32_t background_timer = millis();   // Background screen refresh timer.

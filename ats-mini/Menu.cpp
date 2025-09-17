@@ -1532,7 +1532,7 @@ static void drawScrollDir(int x, int y, int sx)
   drawZoomedMenu(settings[MENU_SCROLL]);
 
   spr.fillRect(37+x+(sx/2), 45+y, 5, 40, TH.menu_param);
-  if(scrollDirection>0)
+  if(scrollDirection<=0)  // Emilio (antes ponía >0 )
     spr.fillTriangle(39+x+(sx/2)-5, 45+y, 39+x+(sx/2)+5, 45+y, 39+x+(sx/2), 45+y-5, TH.menu_param);
   else
     // flecha abajo

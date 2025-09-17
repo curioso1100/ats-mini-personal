@@ -303,7 +303,7 @@ static const Step amSteps[] =
 
 static const Step *steps[4] = { fmSteps, ssbSteps, ssbSteps, amSteps };
 static const uint8_t defaultStepIdx[4] = { 2, 5, 5, 1 };
-
+ 
 static int getLastStep(int mode)
 {
   switch(mode)

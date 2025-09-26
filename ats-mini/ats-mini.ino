@@ -17,8 +17,8 @@
 #define MIN_ELAPSED_TIME         5  // 300
 #define MIN_ELAPSED_RSSI_TIME  200  // RSSI check uses IN_ELAPSED_RSSI_TIME * 6 = 1.2s
 #define ELAPSED_COMMAND      10000  // time to turn off the last command controlled by encoder. Time to goes back to the VFO control // G8PTN: Increased time and corrected comment
-#define DEFAULT_VOLUME          35  // change it for your favorite sound volume
-#define DEFAULT_SLEEP            0  // Default sleep interval, range = 0 (off) to 255 in steps of 5
+#define DEFAULT_VOLUME          15  // change it for your favorite sound volume (Emilio: ponía 35)
+#define DEFAULT_SLEEP           30  // Default sleep interval, range = 0 (off) to 255 in steps of 5 (Emilio: ponía 0)
 #define STRENGTH_CHECK_TIME   1500  // Not used
 #define RDS_CHECK_TIME         250  // Increased from 90
 #define SEEK_TIMEOUT        600000  // Max seek timeout (ms)
@@ -69,10 +69,10 @@ uint8_t volume = DEFAULT_VOLUME;        // Volume, range = 0 (muted) - 63
 uint8_t currentSquelch = 0;             // Squelch, range = 0 (disabled) - 127
 uint8_t FmRegionIdx = 0;                // FM Region
 
-uint16_t currentBrt = 130;              // Display brightness, range = 10 to 255 in steps of 5
+uint16_t currentBrt = 100;              // Display brightness, range = 10 to 255 in steps of 5 (Emilio: ponía 130)
 uint16_t currentSleep = DEFAULT_SLEEP;  // Display sleep timeout, range = 0 to 255 in steps of 5
 long elapsedSleep = millis();           // Display sleep timer
-bool zoomMenu = false;                  // Display zoomed menu item
+bool zoomMenu = true;                  // Display zoomed menu item (Emilio: ponía false)
 int8_t scrollDirection = 1;             // Menu scroll direction
 
 // Background screen refresh

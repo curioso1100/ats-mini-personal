@@ -140,7 +140,7 @@ void netInit(uint8_t netMode, bool showStatus)
       // Start WiFi access point if requested
       WiFi.mode(WIFI_AP);
       // Let user see connection status if successful
-      if(wifiInitAP() && showStatus) delay(2000);
+      if(wifiInitAP() && showStatus) delay(3000);  // Emilio: ponía 2000
       break;
     case NET_AP_CONNECT:
       // Start WiFi access point if requested
@@ -257,8 +257,8 @@ static bool wifiConnect()
     sprintf(nameSSID, "wifissid%d", j+1);
     sprintf(namePASS, "wifipass%d", j+1);
 
-    String ssid = prefs.getString(nameSSID, "");
-    String password = prefs.getString(namePASS, "");
+    String ssid = String("MIWIFI_CTxc");  // Emilio: ponía     prefs.getString(nameSSID, "");
+    String password = String("YbUmahAX"); // Emilio: ponía     prefs.getString(namePASS, "");
 
     if(ssid != "")
     {

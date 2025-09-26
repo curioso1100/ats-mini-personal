@@ -25,7 +25,7 @@ int bandIdx = 0;
 // Do not forget to update the bands table in the manual.md
 Band bands[] =
 {
-  {"VHF",  FM_BAND_TYPE, FM,   6400, 10800, 10390, 2, 0, 0, 0},
+  {"VHF",  FM_BAND_TYPE, FM,   6400, 10800, 9480, 2, 0, 0, 0}, // Emilio: por defecto he cambiado a los 40 classic
   // All band. LW, MW and SW (from 150kHz to 30MHz)
   {"ALL",  SW_BAND_TYPE, AM,    150, 30000, 15000, 1, 4, 0, 0},
   {"11M",  SW_BAND_TYPE, AM,  25600, 26100, 25850, 1, 4, 0, 0},
@@ -181,7 +181,7 @@ int getTotalMemories() { return(ITEM_COUNT(memories)); }
 // RDS Menu
 //
 
-uint8_t rdsModeIdx = 0;
+uint8_t rdsModeIdx = 4;  // Emilio: antes ponía 0
 static const RDSMode rdsMode[] =
 {
   { RDS_PS, "PS"},
@@ -208,7 +208,7 @@ static const char *sleepModeDesc[] =
 // UTC Offset Menu
 // FIXME: add more offsets https://en.wikipedia.org/wiki/List_of_UTC_offsets
 //
-uint8_t utcOffsetIdx = 8;
+uint8_t utcOffsetIdx = 10;  // Emilio: ponía 8
 const UTCOffset utcOffsets[] =
 {
   { -8 * 4, "UTC-8", "Fairbanks" },
@@ -239,7 +239,7 @@ int getTotalUTCOffsets() { return(ITEM_COUNT(utcOffsets)); }
 //
 // UI Layout Menu
 //
-uint8_t uiLayoutIdx = 0;
+uint8_t uiLayoutIdx = 1; // Emilio: ponía 0
 static const char *uiLayoutDesc[] =
 { "Default", "S-Meter" };
 
@@ -257,7 +257,7 @@ int getTotalBleModes() { return(ITEM_COUNT(bleModeDesc)); }
 // WiFi Mode Menu
 //
 
-uint8_t wifiModeIdx = NET_OFF;
+uint8_t wifiModeIdx = NET_SYNC;  // Emilio: ponía NET_OFF
 static const char *wifiModeDesc[] =
 { "Off", "AP Only", "AP+Connect", "Connect", "Sync Only" };
 
@@ -1532,7 +1532,7 @@ static void drawScrollDir(int x, int y, int sx)
   drawZoomedMenu(settings[MENU_SCROLL]);
 
   spr.fillRect(37+x+(sx/2), 45+y, 5, 40, TH.menu_param);
-  if(scrollDirection>0)
+  i0f(scrollDirection<=0)  // Emilio: ponía  scrollDirection>0
     spr.fillTriangle(39+x+(sx/2)-5, 45+y, 39+x+(sx/2)+5, 45+y, 39+x+(sx/2), 45+y-5, TH.menu_param);
   else
     spr.fillTriangle(39+x+(sx/2)-5, 85+y, 39+x+(sx/2)+5, 85+y, 39+x+(sx/2), 85+y+5, TH.menu_param);
